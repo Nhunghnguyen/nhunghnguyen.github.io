@@ -13,6 +13,32 @@
   height: auto ;
   max-width: 100%;
 }
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 </style>
 <body>
 
@@ -51,8 +77,11 @@
 <footer class="w3-container w3-padding-16 w3-center w3-orange w3-xlarge">
   Contact
   <a href="#"><i class="fa fa-linkedin"></i></a>
-  <a href="#"><i class="fa fa-envelope"></i></a>
+  <div class="tooltip"><a href="#"><i class="fa fa-envelope"></i></a>
+    <span class="tooltiptext" >nhunghnguyen at terpmail dot umd dot edu</span>
+  </div>
   <a href="https://scholar.google.com.sg/citations?user=Lu1tXNUAAAAJ&hl=en"><i class="ai ai-google-scholar-square ai-1x"></i></a>
+  
 </footer>
 
 </body>
